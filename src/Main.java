@@ -2,26 +2,67 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.sql.SQLOutput;
 import java.util.Dictionary;
+import java.util.HashMap;
+import java.util.Hashtable;
 
 public class Main {
-    private static StringBuilder fileNames = new StringBuilder();
-    private static Dictionary<String, String> pathToHex;//key: filepath value: first line of file as hex
+    private static HashMap<String, String> nameToHex = new HashMap<>();
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
 
-        File curDir = new File("."); //curDir = current dir, TODO: user inputs the directory
-        getAllFiles(curDir); //fills fileNames with names of all files
+        File curDir = new File("C:\\Users\\4l3x0\\Desktop\\testFolder\\"); //curDir = current dir, TODO: user inputs the directory
+            try {
+                //getAllFiles(curDir); //fills fileNames with names of all files
+            } catch (Exception e) {
+                System.out.println(e);
+                System.out.println("IO Exception");
+                System.exit(0);
+            }
+        curDir = null;
 
 
+        File one = new File("C:\\Users\\4l3x0\\Desktop\\testFolder\\newtwo.txt");
+        System.out.println(one.canWrite());
+        File newFile = new File("C:\\Users\\4l3x0\\Desktop\\testFolder\\new.txt");
+
+        boolean success = one.renameTo(newFile);
+        System.out.println(success);
+
+        /*
+        for (String path : nameToHex.keySet()) {
+            File file = new File(path);
+            System.out.println(path);
+            //File newName = new File(path.substring(0, path.lastIndexOf('.')) + "png");
+            File newName = new File("C:\\Users\\4l3x0\\Desktop\\testFolder\\newfile.png");
+            System.out.println(file.getPath());
+            boolean flag = file.renameTo(newName);
+            System.out.println(flag);
+            //file = changeExtension(file, ".txt");
+
+            //file = changeExtension(nameToHex.keySet())
+
+            //System.out.println(path);
+            //System.out.println(nameToHex.get(path));
+            //System.out.println();
+        }
+
+         */
 
 
 
 
 
     }
-    private static void getAllFiles(File curDir) {
+    public static File changeExtension(File f, String newExtension) {
+        int i = f.getName().lastIndexOf('.');
+        String name = f.getName().substring(0,i);
+        return new File(f.getParent(), name + newExtension);
+    }
+
+    //gets every file in a specified folder recursively
+    //fills dictionary with file name and first line of hex
+    private static void getAllFiles(File curDir) throws IOException {
 
         File[] filesList = curDir.listFiles();
         assert filesList != null;
@@ -29,18 +70,10 @@ public class Main {
             if(f.isDirectory())
                 getAllFiles(f);
             if(f.isFile()){
-                //System.out.println(f.getName());
-                fileNames.append(f.getName()).append(", ");
+                nameToHex.put(f.getAbsolutePath(), asHex(f));
             }
         }
-
     }
-
-
-
-
-
-
 
     public static String asHex(File file) throws IOException {
         //sets file to file
@@ -62,7 +95,9 @@ public class Main {
         for (int byteCount = 0; byteCount < 16; byteCount++) {
             firstLine.append(String.format("%1$02x ", input.read()));
         }
+        input.close();
         return firstLine.toString();
+
     }
 
 

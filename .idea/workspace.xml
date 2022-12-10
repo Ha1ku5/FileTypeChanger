@@ -47,8 +47,95 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "embold_excluded_rules_Java": [
+      "Use Of Sysout",
+      "Main Should Not Throw Anything",
+      "Do Not Call System Exit",
+      "Return In Finally Block",
+      "Direct Object Reference"
+    ],
+    "embold_included_rules_Java": [
+      "Public Cloneable Method Without Final",
+      "Avoid Non Case Labels In Switch Statement",
+      "Missing Required Cryptographic Step",
+      "Tightly Coupled Class",
+      "Accessing Android External Storage",
+      "Sensitive Info Logged",
+      "Authenticate LDAP Connection",
+      "Unsafe Jackson Deserialization",
+      "Finalize Without Super",
+      "Non-ThreadSafe Field Declaration",
+      "Unusual REST Practice",
+      "Big Integer Instantiation",
+      "Avoid NullCipher",
+      "Potential Path Traversal",
+      "Avoid FilecreateTempFile",
+      "Avoid Catching NPE",
+      "Invalid Logging ClassName",
+      "Weak Cipher Algorithm",
+      "Avoid Concatenating Char As String",
+      "RunFinalizersOnExit Should Not Be Called",
+      "Public Static Field Should Be Final",
+      "Empty Synchronized Block",
+      "Clone Without Super",
+      "Missing Break Statement In Switch",
+      "Static Final Array Should Be Private",
+      "String Concatenation In Logging",
+      "Initialization Of SecureRandom At Method Level",
+      "Empty String Should Not Be Used",
+      "Avoid Using Predictable Random Values",
+      "Disabled Spring Securitys CSRF",
+      "Potential Command Injection",
+      "Avoid Synchronized At Method Level",
+      "Improper Validation Of ArrayIndex",
+      "Avoid Throwing Generic Exception",
+      "Log Level Info In Catch Block",
+      "Security Sensitive REGEX",
+      "Avoid Using RSA Algorithm Without OAEP",
+      "Explicit Call To Finalize",
+      "Non-Private Field Access In Synchronized Block",
+      "Run Should Not Be Called Directly",
+      "Unencrypted Server Socket",
+      "Use Of Syserr",
+      "Shortcircuit Logic Should Be Used In Boolean Contexts",
+      "Redirect Without Exit",
+      "Compile REGEX Once",
+      "Sleep In Synchronized Block",
+      "Web Application Contains Main Method",
+      "Error Message Containing Sensitive Data",
+      "Complex REGEX Pattern",
+      "Resource Leak",
+      "Avoid Catching Generic Exception",
+      "Non Serializable In Session",
+      "Preserve StackTrace In Logs",
+      "Should Not Use getRequestedSessionId API",
+      "Maps With Enum Values Replace With EnumMap",
+      "Return Empty Array Or Collection Instead Of Null",
+      "Setting Java Bean Properties",
+      "Comparision Of Object References Instead Of Object Contents",
+      "Variables Should Not Be Self Assigned",
+      "Possible ThreadLeak In ExecutorService",
+      "Mismatch Regex Boundaries Should Not Be Used",
+      "Mutable Object Should Not Reference Public",
+      "Read-Only Transaction",
+      "Cipher With No Integrity",
+      "Exceptions Should Not Be Thrown In Finally Block",
+      "Missing Default Case In Switch",
+      "Sensitive Data In Serializable Class",
+      "Public Method Return Private Data Structure",
+      "Empty Catch Block",
+      "Externalizable Must Have No Arguments Constructor",
+      "Exclude SpringBootApplication And ComponentScan From The Default Package",
+      "Missing Throw In Catch Block",
+      "Unencrypted Socket",
+      "Weak SSLContext",
+      "Databases Should Be Password Protected",
+      "Finalize Method Declare Public"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -71,5 +158,9 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
